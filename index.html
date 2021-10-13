@@ -2,9 +2,9 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Power-PRO Cot WebGL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css"><link rel="stylesheet" href="src/video.popup.css">
       <link rel="stylesheet" href="src/video.popup.css">
@@ -12,9 +12,6 @@
       <script type="text/javascript">
       </script>
       <style>
-          body{
-            touch-action: none;
-          }
           /* Safari fix */
           input {
               /* Chrome, Opera, Safari */
@@ -302,26 +299,22 @@
       document.body.appendChild(script);
     </script>
 
-        <script title="main">
-      
+      <script title="main">
+
           //this.alert("v0.0.1 (1)");
-      
+
           checkLandscape();
-          changeScale();
-      
+
           window.addEventListener("orientationchange", function () {
-            checkLandscape();
+              checkLandscape();
           }, false);
-      
+
           function checkLandscape() {
-            if (this.screen.availHeight > this.screen.availWidth) {
-              this.alert("Please turn your phone to landscape mode");
-            }
+              if (this.screen.availHeight > this.screen.availWidth) {
+                  this.alert("Please turn your phone to landscape mode");
+              }
           }
-      
-          function changeScale(){
-            visualViewport.scale = 1.0;
-          }
-        </script>
+
+      </script>
   </body>
 </html>
