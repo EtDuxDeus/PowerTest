@@ -148,22 +148,17 @@
           var touch1X;
           var touch1Y;
 
-          document.addEventListener('touchstart', function(evt) {
-              if (evt.touches.length >= 2) {
-                  touch0X = evt.touches[0].clientX;
-                  touch0Y = evt.touches[0].clientY;
-
-                  touch1X = evt.touches[1].clientX;
-                  touch1Y = evt.touches[1].clientY;
-              }
-          }
-          , false);
-
-          document.addEventListener('mousedown', handleTouchStart, false);
-          function handleTouchStart(evt) {
-              touch0X = evt.clientX;
-              touch0Y = evt.clientY;
-          };
+          document.addEventListener('touchmove', function(evt) 
+          {
+            if (evt.touches.length >= 2) 
+            {
+            touch0X = evt.touches[0].clientX;
+            touch0Y = evt.touches[0].clientY;
+            
+            touch1X = evt.touches[1].clientX;
+            touch1Y = evt.touches[1].clientY;
+            }
+          }, false);
 
           function GetTouchPosition0X() {
               console.log(touch0X);
