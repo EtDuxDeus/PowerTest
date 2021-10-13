@@ -148,7 +148,7 @@
           var touch1X;
           var touch1Y;
 
-          document.addEventListener('touchstart', handleTouchStart, false);
+          document.addEventListener('touchstart', handleTouchStart(evt), false);
           function handleTouchStart(evt) {
               if (evt.touches.length >= 2) {
                   touch0X = evt.touches[0].clientX;
